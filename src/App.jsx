@@ -14,7 +14,7 @@ function App() {
     useEffect(() => {
         const url = new URL(window.location)
         setPathName(url.pathname)
-    })
+    }, [window.location])
 
     useEffect(() => {
         function popStateHandler() {
