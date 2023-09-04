@@ -6,7 +6,8 @@ export const watcherService = {
     addWatcher,
     getWatchers,
     getWatcherById,
-    removeWatcher
+    removeWatcher,
+    updateWatcher
 }
 
 export class Watcher {
@@ -33,4 +34,8 @@ async function getWatcherById(id) {
 
 async function removeWatcher(id) {
     return await storageService.remove(ENTITY_TYPE, id)
+}
+
+async function updateWatcher(updatedWatcher) {
+    return await storageService.put(ENTITY_TYPE, updatedWatcher)
 }

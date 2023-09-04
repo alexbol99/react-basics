@@ -1,6 +1,6 @@
 function Link({url, title}) {
     function onLinkClicked() {
-        history.pushState({}, "", url)
+        history.pushState({}, "", `?page=${url}`)
         location.reload()
     }
 

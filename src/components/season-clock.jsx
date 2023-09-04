@@ -21,9 +21,9 @@ function SeasonClock() {
 
     const season_name = getSeasonName(date.getMonth()+1)
     const month_name = date.toLocaleString('en-US', { month: 'long' })
-    const image_src = `./src/assets/${getSeasonName(date.getMonth())}.png`
+    const image_src = `${getSeasonName(date.getMonth())}.png`
     const theme = isDark ? "season-clock-container-dark" : "season-clock-container-light"
-    console.log("before render")
+
     return (
         <div className={"season-clock-container " + theme}
              onClick={() => setIsDark(prevIsDark => !prevIsDark)}>

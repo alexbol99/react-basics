@@ -11,15 +11,19 @@ import PageNotFound from "./components/404.jsx";
 function App() {
     const [pathName, setPathName] = useState("/")
 
-    useEffect(() => {
+    function getPageName() {
         const url = new URL(window.location)
-        setPathName(url.pathname)
+        let page = url.searchParams.get("page")
+        return page ? `/${page}` : "/"
+    }
+
+    useEffect(() => {
+        setPathName(getPageName())
     }, [window.location])
 
     useEffect(() => {
         function popStateHandler() {
-            const url = new URL(window.location)
-            setPathName(url.pathname)
+            setPathName(getPageName())
         }
         window.addEventListener("popstate", popStateHandler)
 

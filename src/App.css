@@ -45,7 +45,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 35vh;
   background-color: #f0f0f0;
 }
 
@@ -132,7 +132,7 @@
 
 .watcher-container {
   width: 75vh;
-  height: 50vh;
+  height: 40vh;
   background-color: peachpuff;
   display: flex;
   flex-direction: column;
@@ -142,7 +142,7 @@
 }
 
 .watcher-title {
-  font-size: 24px;
+  font-size: 36px;
   font-weight: bold;
 }
 
@@ -191,6 +191,10 @@
   margin-bottom: 10px;
 }
 
+.watcher-avatar img {
+  color: darkred;
+  width: 100%;
+}
 .watcher-user-name {
   font-weight: bold;
   margin-bottom: 5px;
@@ -214,6 +218,12 @@
 
 .watcher-select-button {
   background-color: #27ae60;
+}
+
+.watcher-card hr {
+  width: 90%;
+  color: #1a1a1a;
+  size: 2px;
 }
 
 .router-container {
