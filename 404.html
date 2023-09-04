@@ -6,7 +6,10 @@
   <script type="text/javascript">
     // JavaScript redirect function
     function redirectToNewURL() {
-      window.location.href = '/react-basics/'; // Replace with the new URL you want to redirect to
+      const url = new URL(window.location, "/react-basics/")
+      const pathname = url.pathname
+      console.log(path_name)
+      window.location.href = `/react-basics/?page=${pathname}`;
     }
 
     // Call the redirect function when the page loads
