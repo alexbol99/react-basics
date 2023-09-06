@@ -1,13 +1,15 @@
-import Link from "./link.jsx";
+import { Link } from "react-router-dom";
 
 function Home() {
     return (
         <div className="router-container">
-            <Link url="rare-animals-table" title="Rare Anymals Table" />
-            <Link url="season-clock" title="Season Clock" />
-            <Link url="count-down" title="Count Down App" />
-            <Link url="watcher-app" title="WatcherCard App" />
-            <Link url="mouse-monitor" title="Mouse Monitor" />
+            {/*<nav>*/}
+                <Link to="/rare-animals-table">Rare Animals Table</Link>
+                <Link to="/season-clock">Season Clock</Link>
+                <Link to="count-down">Count Down App</Link>
+                <Link to="watcher-app">WatcherCard App</Link>
+                <Link to="mouse-monitor">Mouse Monitor</Link>
+            {/*</nav>*/}
         </div>
     );
 }
